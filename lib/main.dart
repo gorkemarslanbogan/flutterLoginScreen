@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'enums.dart';
 
 void main() =>
     runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
@@ -80,8 +81,8 @@ class HomeScreen extends StatelessWidget {
                 alignment: WrapAlignment.center,
                 runSpacing: 25,
                 children: [
-                  _textFieldWidget(textfieldValue: "First Name"),
-                  _textFieldWidget(textfieldValue: "Last Name"),
+                  _textFieldWidget(textfieldValue: "First Name", errorText: "Please enter your first name",),
+                  _textFieldWidget(textfieldValue: "Last Name", errorText: "Please enter your last name"),
                 ],
               ),
             ),
@@ -104,7 +105,6 @@ class HomeScreen extends StatelessWidget {
         ),
       ],
     );
-    
   }
 }
 
@@ -127,9 +127,9 @@ class textwidgetValue extends StatelessWidget {
 }
 
 class _textFieldWidget extends StatelessWidget {
-  const _textFieldWidget({Key? key, required this.textfieldValue})
-      : super(key: key);
+  const _textFieldWidget({Key? key, required this.textfieldValue, required this.errorText}): super(key: key);
   final String textfieldValue;
+  final String errorText;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -137,10 +137,9 @@ class _textFieldWidget extends StatelessWidget {
       fillColor: Colors.white,
       filled: true,
       hintText: textfieldValue,
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.vertical(
-            bottom: Radius.elliptical(15, 15), top: Radius.elliptical(15, 15)),
-      ),
+      border: borderSettings,
+      enabledBorder: borderSettings,
+      errorText: errorText,
     ));
   }
 }
