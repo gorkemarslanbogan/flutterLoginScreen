@@ -1,9 +1,10 @@
 # Flutter Login Screen
 
 Only design projec haven't backend services.
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![This is image](https://github.com/gorkemarslanbogan/flutterLoginScreen/blob/main/Screenshot_1651529792.png?raw=true)  |  ![This is image](https://github.com/gorkemarslanbogan/flutterLoginScreen/blob/main/Screenshot_1651589138.png?raw=true)
 
-![This is image](https://github.com/gorkemarslanbogan/flutterLoginScreen/blob/main/Screenshot_1651529792.png?raw=true)
-![This is image](https://github.com/gorkemarslanbogan/flutterLoginScreen/blob/main/Screenshot_1651589138.png?raw=true)
 
 This project is a starting point for a Flutter application.
 
